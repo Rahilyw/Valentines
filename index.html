@@ -241,6 +241,8 @@
     </style>
 </head>
 <body>
+    <audio id="confettiSound" src="confetti_audio.mp3"></audio>
+
     <div class="container">
         <h1 id="question">Keyaana, will you be my Valentine? 💕</h1>
         
@@ -305,6 +307,7 @@ Cutie-bootie ❤️
         // Audio elements
         const audio = document.getElementById('voiceNote');
         const playBtn = document.getElementById('playAudioBtn');
+        const confettiSound = document.getElementById('confettiSound'); 
 
         // GIF URLs
         const puppyGif = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHQybG8ycWJkand2eGhsM3I5MTl1NTYxOHBuMzhodGp1anZobXU2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nNfRs2Unc5VxI3VnQB/giphy.gif';
@@ -344,6 +347,9 @@ Cutie-bootie ❤️
             buttonsContainer.classList.add('hidden');
             successMessage.style.display = 'block';
             question.textContent = '🎉Yay you said Yes!🎉';
+
+            // PLAY CONFETTI SOUND
+            confettiSound.play();
 
             letterBtn.style.display = 'inline-block';
             letterBtn.focus();
